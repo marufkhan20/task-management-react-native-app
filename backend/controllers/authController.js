@@ -71,7 +71,7 @@ const addNumberController = async (req, res) => {
     }
 
     // geenerate 6 digit verify code
-    const verifyCode = Math.floor(Math.random() * 900000) + 100000;
+    const verifyCode = Math.floor(Math.random() * 9000) + 1000;
 
     // update user data
     const user = await User.findById(id);
@@ -84,7 +84,7 @@ const addNumberController = async (req, res) => {
       const response = await client.messages.create({
         body: `Your verification code is ${verifyCode} it will expire within 30 minutes`,
         from: "+15313314026",
-        to: `+8801960038965`,
+        to: `+88${phone}`,
       });
       console.log(response);
       res.status(200).json({ _id: user._id });

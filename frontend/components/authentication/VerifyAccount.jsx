@@ -143,44 +143,6 @@ const VerifyAccount = () => {
             onChangeText={(value) => updateCode(value)}
           />
         </View>
-        <View
-          style={{
-            height: 55,
-            width: 55,
-            backgroundColor: COLORS.gray4,
-            borderRadius: 10,
-          }}
-        >
-          <TextInput
-            style={{
-              height: "100%",
-              width: "100%",
-              textAlign: "center",
-              fontSize: 22,
-            }}
-            keyboardType="number-pad"
-            onChangeText={(value) => updateCode(value)}
-          />
-        </View>
-        <View
-          style={{
-            height: 55,
-            width: 55,
-            backgroundColor: COLORS.gray4,
-            borderRadius: 10,
-          }}
-        >
-          <TextInput
-            style={{
-              height: "100%",
-              width: "100%",
-              textAlign: "center",
-              fontSize: 22,
-            }}
-            keyboardType="number-pad"
-            onChangeText={(value) => updateCode(value)}
-          />
-        </View>
       </View>
 
       <View style={{ marginTop: 30 }}>
