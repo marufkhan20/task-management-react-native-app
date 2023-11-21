@@ -84,7 +84,9 @@ const AddNumber = () => {
       )}
 
       <View style={{ marginTop: 60 }}>
-        <Button onPress={submitHandler}>Continue</Button>
+        <Button onPress={submitHandler} loading={isLoading}>
+          Continue
+        </Button>
       </View>
     </View>
   );

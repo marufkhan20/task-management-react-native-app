@@ -116,7 +116,9 @@ const SignUp = () => {
       </View>
 
       <View style={{ marginTop: 30 }}>
-        <Button onPress={submitHandler}>Sign Up</Button>
+        <Button onPress={submitHandler} loading={isLoading}>
+          Sign Up
+        </Button>
       </View>
 
       <View>

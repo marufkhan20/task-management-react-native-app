@@ -1,8 +1,9 @@
 import React from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity } from "react-native";
+import { icons } from "../../constants";
 import { COLORS } from "../../constants/theme";
 
-const Button = ({ type, children, onPress }) => {
+const Button = ({ type, children, onPress, loading }) => {
   return (
     <TouchableOpacity
       style={{
@@ -18,19 +19,26 @@ const Button = ({ type, children, onPress }) => {
       }}
       onPress={onPress}
     >
-      <Text
-        style={{
-          color:
-            type === "secondary" || type === "border"
-              ? COLORS.primary
-              : COLORS.white,
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 17,
-        }}
-      >
-        {children}
-      </Text>
+      {loading ? (
+        <Image
+          style={{ width: 25, height: 25, alignSelf: "center" }}
+          source={icons.loading}
+        />
+      ) : (
+        <Text
+          style={{
+            color:
+              type === "secondary" || type === "border"
+                ? COLORS.primary
+                : COLORS.white,
+            textAlign: "center",
+            fontWeight: 700,
+            fontSize: 17,
+          }}
+        >
+          {children}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 };

@@ -95,7 +95,7 @@ const addNumberController = async (req, res) => {
   } catch (err) {
     console.log("error", err);
     res.status(500).json({
-      error: "Server error occurred!!",
+      error: err,
     });
   }
 };
