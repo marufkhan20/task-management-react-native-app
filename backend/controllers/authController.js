@@ -3,13 +3,10 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const sendMail = require("../services/emailService");
 const twilio = require("twilio");
-const {
-  UserBindingPage,
-} = require("twilio/lib/rest/chat/v2/service/user/userBinding");
 
 const client = twilio(
   "AC910ac35b270527b97d83e122d6685efe",
-  "52e1b491378ad94fbf0a7bb6416859ae"
+  "294f64ca9cdd3f4c4fdb00932c1b758d"
 );
 
 // register controller
@@ -87,7 +84,7 @@ const addNumberController = async (req, res) => {
       const response = await client.messages.create({
         body: `Your verification code is ${verifyCode} it will expire within 30 minutes`,
         from: "+15313314026",
-        to: `+88${phone}`,
+        to: `+8801960038965`,
       });
       console.log(response);
       res.status(200).json({ _id: user._id });
